@@ -1,0 +1,73 @@
+:root {
+  --color-primary: #f5f5f2;
+  --color-primary-light: #ffffff;
+  --color-primary-dark: #d8d9df;
+  --color-secondary: #101522;
+  --color-secondary-light: #20283a;
+  --color-bg: #101a31;
+  --color-bg-secondary: #172440;
+  --color-bg-card: #1b2944;
+  --color-text: #fbfbfd;
+  --color-text-secondary: #d0d5df;
+  --color-text-inverse: #111827;
+  --color-accent: #d8b65a;
+  --color-border: rgba(255,255,255,.17);
+  --color-shadow: rgba(0,0,0,.42);
+  --font-primary: Inter, "Aptos", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Manrope", Inter, "Aptos", "Segoe UI", sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: clamp(3.2rem, 7vw, 6.8rem);
+  --font-size-h2: clamp(2.1rem, 4.4vw, 4rem);
+  --spacing-sm: .5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 4rem;
+  --max-width: 1200px; --border-radius: 14px; --transition-speed: .35s;
+  --club-gradient: linear-gradient(115deg,#ffffff 0%,#e5e7eb 58%,#d8b65a 100%);
+}
+body[data-club="manchester"] {
+  --color-primary: #e32636;
+  --color-primary-light: #ff5360;
+  --color-primary-dark: #a80f20;
+  --color-secondary: #08090d;
+  --color-secondary-light: #17191f;
+  --color-bg: #100d10;
+  --color-bg-secondary: #1a1216;
+  --color-bg-card: #21171c;
+  --color-text: #fffafb;
+  --color-text-secondary: #e1d8db;
+  --color-text-inverse: #ffffff;
+  --color-accent: #e32636;
+  --color-border: rgba(255,255,255,.16);
+  --club-gradient: linear-gradient(115deg,#e32636 0%,#a80f20 58%,#08090d 100%);
+}
+
+/* Madrid: white and gold. Manchester United: red and black. */
+body[data-club="madrid"] {
+ --color-primary:#c6a04a; --color-primary-light:#e1c778; --color-primary-dark:#9f7b2e;
+ --color-secondary:#14213d; --color-secondary-light:#263657; --color-bg:#fbfaf6;
+ --color-bg-secondary:#f1eee5; --color-bg-card:#fff; --color-text:#18233b;
+ --color-text-secondary:#4d5870; --color-text-inverse:#fff; --color-accent:#b58b32;
+ --color-border:rgba(20,33,61,.16); --color-shadow:rgba(20,33,61,.12);
+}
+body[data-club="manchester"] {
+ --color-primary:#e32636; --color-primary-light:#ff5967; --color-primary-dark:#a80f20;
+ --color-secondary:#09090b; --color-secondary-light:#242428; --color-bg:#a90f22;
+ --color-bg-secondary:#8f0c1d; --color-bg-card:#151316; --color-text:#fffafb;
+ --color-text-secondary:#f0dfe2; --color-text-inverse:#fff; --color-accent:#f1c6cb;
+ --color-border:rgba(255,255,255,.2); --color-shadow:rgba(0,0,0,.28);
+}
+
+
+/* Refined club colour systems: the crest colours guide accents, not low-contrast backgrounds. */
+body[data-club="madrid"] {
+  --color-primary:#b9933f; --color-primary-light:#d8b65b; --color-primary-dark:#92712b;
+  --color-secondary:#14264b; --color-secondary-light:#23385f;
+  --color-bg:#fffefa; --color-bg-secondary:#f5f1e7; --color-bg-card:#ffffff;
+  --color-text:#18233b; --color-text-secondary:#4d5870; --color-text-inverse:#ffffff;
+  --color-accent:#b9933f; --color-border:rgba(20,38,75,.16); --color-shadow:rgba(20,38,75,.10);
+}
+body[data-club="manchester"] {
+  --color-primary:#c8102e; --color-primary-light:#e22b46; --color-primary-dark:#970b22;
+  --color-secondary:#111111; --color-secondary-light:#303030;
+  --color-bg:#fffdfd; --color-bg-secondary:#f5eeee; --color-bg-card:#ffffff;
+  --color-text:#171416; --color-text-secondary:#51484b; --color-text-inverse:#ffffff;
+  --color-accent:#c8102e; --color-border:rgba(17,17,17,.16); --color-shadow:rgba(17,17,17,.11);
+}

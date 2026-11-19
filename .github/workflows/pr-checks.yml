@@ -1,0 +1,36 @@
+name: PR Quality Checks
+on:
+  pull_request:
+    branches: [main, develop]
+jobs:
+  check-html-titles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check title tag
+        run: grep -qi '<title>' index.html
+  check-image-alt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check image alt attributes
+        run: |
+          if grep -n '<img' index.html | grep -v 'alt='; then
+            echo "Image missing alt attribute"
+            exit 1
+          fi
+  check-no-console-log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for console.log
+        run: |
+          if grep -rn 'console.log' js/*.js; then
+            echo "Remove console.log before merging"
+            exit 1
+          fi
+  all-checks-passed:
+    needs: [check-html-titles, check-image-alt, check-no-console-log]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "All PR checks passed"
